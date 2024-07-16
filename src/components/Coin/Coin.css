@@ -1,0 +1,81 @@
+.coin {
+    display: flex;
+    flex-direction: column;
+    gap: 6.11vw;
+    align-items: center;
+    margin-bottom: 7.45vw;
+}
+
+.coin_count {
+    display: flex;
+    gap: 1.53vw;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.coin_mini {
+    width: 7.63vw;
+    height: 7.63vw;
+}
+
+.coin_txt {
+    color: #fff;
+    font-family: 'pixel-r';
+    font-size: 6.11vw;
+    font-weight: 400;
+}
+
+.coin_btn {
+    z-index: 9;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    margin-bottom: 18.83vw;
+}
+
+.coin_btn img {
+    width: 60.56vw;
+}
+
+.coin_band {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 2.29vw;
+}
+
+.coin_band_num {
+    display: flex;
+    align-items: center;
+    gap: 2.29vw;
+    justify-content: center;
+}
+
+.coin_band_txt {
+    font-family: 'inter-r';
+    font-size: 3.56vw;
+    font-weight: 700;
+    color: #fff;
+}
+
+.coin_band_txt span {
+    color: #C5C5C5;
+    font-weight: 200;
+    font-size: 3.05vw;
+}
+
+.coin_band_cont {
+    width: 80.66vw;
+    display: flex;
+    border-radius: 4vw;
+}
+
+.coin_band_block {
+    background: linear-gradient(90deg, rgba(68, 68, 51, 0.8) 0%, #E8E22E 100%);
+    width: 80.66vw;
+    border-radius: 4vw;
+    height: 5.34vw;
+    justify-self: start;
+    z-index: 9;
+    align-self: baseline;
+}
