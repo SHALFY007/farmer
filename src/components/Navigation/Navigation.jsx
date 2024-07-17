@@ -30,10 +30,10 @@ function Navigation() {
                     <img src="./img/img2.png" alt="img" />
                     <span>Shop</span>
                 </Link>
-                <button className="navigation_content" id='tasks' onClick={changeActive}>
+                <Link className="navigation_content" id='tasks' onClick={changeActive} to={"/tasks"}>
                     <img src="./img/img3.png" alt="img" />
                     <span>Tasks</span>
-                </button>
+                </Link>
                 <button className="navigation_content" id='profile' onClick={changeActive}>
                     <img src="./img/img4.png" alt="img" />
                     <span>Profile</span>

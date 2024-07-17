@@ -1,0 +1,10 @@
+.tasks {
+    padding-top: 7.63vw;
+}
+
+.tasks_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.54vw;
+    margin-top: 9.92vw;
+}
