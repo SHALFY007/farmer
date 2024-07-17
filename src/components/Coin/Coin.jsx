@@ -51,8 +51,8 @@ function Coin() {
                 <img src="./img/money-mini.png" alt="money" />
                 <p className="coin_txt">{format(count.toString())}</p>
             </div>
-            <button className="coin_btn" onClick={incrementMoney}>
-                <img src={skin} alt="coin" draggable="false"/>
+            <button className="coin_btn noselect" onClick={incrementMoney} >
+                <img src={skin} alt="coin" draggable="false" className='noselect'/>
             </button>
             <div className="coin_band">
                 <div className="coin_band_num">
