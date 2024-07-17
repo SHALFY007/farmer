@@ -16,6 +16,7 @@ function Coin() {
     const dispatch = useDispatch()
 
     const incrementMoney =() => {
+        window.navigator.vibrate(200)
         dispatch(increment())
         dispatch(increase())
 
@@ -37,7 +38,7 @@ function Coin() {
                 <p className="coin_txt">{format(count.toString())}</p>
             </div>
             <button className="coin_btn" onClick={incrementMoney}>
-                <img src={skin} alt="coin" />
+                <img src={skin} alt="coin" draggable="false"/>
             </button>
             <div className="coin_band">
                 <div className="coin_band_num">

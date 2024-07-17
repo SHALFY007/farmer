@@ -145,7 +145,7 @@
 .swiper-wrapper {
     display: flex;
     position: relative;
-    width: 1000px;
+    width: 200vw;
 }
 
 .skin_block {

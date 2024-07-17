@@ -7,7 +7,7 @@ function Tasks() {
     const tasksList = useSelector((state) => state.tasks.tasks)
 
     return (
-        <main className="tasks">
+        <main className="tasks noselect">
             <header className="header">
                 <h2 className="header_txt">Tasks List</h2>
             </header>

@@ -6,7 +6,7 @@ function Home() {
     const tg = window.Telegram.WebApp;
 
     return (
-        <main className="home">
+        <main className="home noselect">
             <div className="home_info">
                 <div className="home_info_block">
                 {tg.initDataUnsafe?.user && (

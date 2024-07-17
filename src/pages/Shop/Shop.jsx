@@ -76,7 +76,7 @@ function Shop() {
     }, [])
 
     return (
-        <main className='shop'>
+        <main className='shop noselect'>
             <header className="header">
                 <h2 className="header_txt">Shop</h2>
             </header>
@@ -152,7 +152,7 @@ function Shop() {
                     >
                     <SwiperSlide>
                     <div className="upgrade_bottom skin_block" status='buy' id='firstSkin'>
-                        <img src="./img/skin.png" alt="sprite" />
+                        <img src="./img/skin.png" alt="sprite"  className='sprite'/>
                     <div className="upgrade_autofarm">
                     <h5 className="upgrade_header">
                             CryptoFarm

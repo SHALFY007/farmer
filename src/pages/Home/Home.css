@@ -7,7 +7,7 @@
 .home_info {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20.36vw;
+    /* grid-template-rows: 20.36vw; */
     gap: 2.54vw;
     margin-bottom: 15.78vw;
 }
@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: center;
     gap: 1.27vw;
+    padding: 5.09vw 0;
 }
 
 .profile_img {

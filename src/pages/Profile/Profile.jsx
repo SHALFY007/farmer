@@ -4,11 +4,11 @@ function Profile() {
 
     return (
         <main className="profile">
-            <header className="header">
+            <header className="header noselect">
                 <h2 className="header_txt">Profile</h2>
             </header>
             <hr />
-            <div className="profile_info">
+            <div className="profile_info noselect">
                 <img src="./img/profile.png" alt="" className="profile_big_img" />
                 <div className="profile_info_block">
                     <p className="profile_name">Farmer</p>
@@ -17,7 +17,7 @@ function Profile() {
                 </div>
             </div>
             <hr />
-            <div className="profile_referal">
+            <div className="profile_referal noselect">
                 <h2 className="referal_header">Invite friends and earn coins </h2>
                 <div className="referal_block">
                     <span>0 FRIEND</span>
