@@ -32,7 +32,7 @@ function Coin() {
     }, [size])
 
     return (
-        <div className="coin">
+        <div className="coin noselect">
             <div className="coin_count">
                 <img src="./img/money-mini.png" alt="money" />
                 <p className="coin_txt">{format(count.toString())}</p>
