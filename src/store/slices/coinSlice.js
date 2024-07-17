@@ -39,13 +39,20 @@ export const coinSlice = createSlice({
         if (state.count > state.energyPrice) {
             state.count -= state.energyPrice
             state.maximum += 500
+            state.able += 500
         }
+    },
+    raiseEnergy: (state) => {
+        state.able += 10
     },
     editSkin: (state, action) => {
         state.skin = action.payload
     },
     buySkinSl: (state) => {
         state.isBuy = true
+    },
+    setMaximum: (state) => {
+        state.able = state.maximum
     },
     editActive: (state, action) => {
         state.currentActive = action.payload
@@ -57,6 +64,6 @@ export const coinSlice = createSlice({
   },
 })
 
-export const { increment, increase, nextTap, upEnergy, editSkin, buySkinSl, editActive, editLocal } = coinSlice.actions
+export const { increment, increase, nextTap, upEnergy, editSkin, buySkinSl, editActive, editLocal, raiseEnergy, setMaximum } = coinSlice.actions
 
 export default coinSlice.reducer

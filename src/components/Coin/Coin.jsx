@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { increment, increase } from '../../store/slices/coinSlice'
+import { increment, increase, raiseEnergy , setMaximum} from '../../store/slices/coinSlice'
 import { useEffect, useState } from 'react'
 import format from '../../utils/format'
 import './Coin.css'
@@ -11,6 +11,7 @@ function Coin() {
     const maximum = useSelector((state) => state.coin.maximum)
     const oneTap = useSelector((state) => state.coin.oneTap)
     const skin = useSelector((state) => state.coin.skin)
+    let isUp = true
     const proc = oneTap/maximum*100
     const [size, setSize] = useState(80.66)
     const dispatch = useDispatch()
@@ -30,6 +31,19 @@ function Coin() {
     useEffect(() => {
         document.querySelector('.coin_band_block').style.width = size + 'vw'
     }, [size])
+
+    useEffect(() => {
+        if ((maximum - able) >= 10 ) {
+            var inter = setInterval(() => {
+                    dispatch(raiseEnergy())
+
+            }, 3000)
+        } else {
+            clearInterval(inter)
+            dispatch(setMaximum())
+        }
+        
+    }, [able])
 
     return (
         <div className="coin noselect">
