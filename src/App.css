@@ -17,6 +17,10 @@
   position: absolute;
 }
 
+.app_content {
+  height: 85vh;
+}
+
 @keyframes fall {
   0% {
     transform: translateY(-200vh);

@@ -16,11 +16,14 @@ function App() {
     <div className="App">
       <div className="anim_bg">
       </div>
+
       <Router>
+      <div className="app_content">
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/shop" element={<Shop/>}/>
         </Routes>
+        </div>
         <Navigation/>
     </Router>
     </div>
