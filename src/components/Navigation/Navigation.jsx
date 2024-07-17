@@ -34,10 +34,10 @@ function Navigation() {
                     <img src="./img/img3.png" alt="img" />
                     <span>Tasks</span>
                 </Link>
-                <button className="navigation_content" id='profile' onClick={changeActive}>
+                <Link className="navigation_content" id='profile' onClick={changeActive} to={'/profile'}>
                     <img src="./img/img4.png" alt="img" />
                     <span>Profile</span>
-                </button>
+                </Link>
             </div>
         </div>
     )

@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
 import Shop from './pages/Shop/Shop';
 import Tasks from './pages/Tasks/Tasks';
+import Profile from './pages/Profile/Profile';
 import {
   BrowserRouter as Router,
   Route,
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/shop" element={<Shop/>}/>
           <Route path="/tasks" element={<Tasks/>}/>
+          <Route path="/profile" element={<Profile/>}/>
         </Routes>
         </div>
         <Navigation/>
