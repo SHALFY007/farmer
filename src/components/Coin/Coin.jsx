@@ -18,8 +18,8 @@ function Coin() {
     const dispatch = useDispatch()
 
     const drawCount = (e) => {
-        const y = e.clientY
-        const x = e.clientX
+        const y = e.targetTouches[0].clientY
+        const x = e.targetTouches[0].clientX
         
         const newDiv = document.createElement("div");
         newDiv.style.position = 'absolute'
@@ -75,7 +75,7 @@ function Coin() {
                 <img src="./img/money-mini.png" alt="money" />
                 <p className="coin_txt">{format(count.toString())}</p>
             </div>
-            <button className="coin_btn noselect" onClick={incrementMoney}>
+            <button className="coin_btn noselect" onTouchStart={incrementMoney}>
                 <img src={skin} alt="coin" draggable="false" className='noselect'/>
             </button>
             <div className="coin_band">
