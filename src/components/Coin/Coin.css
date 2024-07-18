@@ -58,6 +58,10 @@
     color: #fff;
 }
 
+.coin_new_tap {
+    font-size: 7vw;
+}
+
 .coin_band_txt span {
     color: #C5C5C5;
     font-weight: 200;

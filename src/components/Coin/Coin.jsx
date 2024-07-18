@@ -11,13 +11,37 @@ function Coin() {
     const maximum = useSelector((state) => state.coin.maximum)
     const oneTap = useSelector((state) => state.coin.oneTap)
     const skin = useSelector((state) => state.coin.skin)
+    const [counter, setCounter] = useState(1)
     let isUp = true
     const proc = oneTap/maximum*100
     const [size, setSize] = useState(80.66)
     const dispatch = useDispatch()
 
-    const incrementMoney =() => {
+    const drawCount = (e) => {
+        const y = e.clientY
+        const x = e.clientX
+        
+        const newDiv = document.createElement("div");
+        newDiv.style.position = 'absolute'
+        newDiv.style.top = y + 'px'
+        newDiv.style.left = x + 'px'
+        newDiv.classList.add(`click_${counter}`)
+        newDiv.classList.add('coin_band_txt')
+        newDiv.classList.add('coin_new_tap')
+        const newContent = document.createTextNode(`+${oneTap}`);
+        newDiv.appendChild(newContent);
+        console.log(newDiv)
+        let currentDiv = document.querySelector('.coin_btn')
+        currentDiv.insertAdjacentHTML('afterbegin', newDiv.outerHTML);
+        setCounter(counter+1)
+        setTimeout(() => {
+            document.querySelector(`.click_${counter}`).remove()
+        }, 1000)
+    }
+
+    const incrementMoney =(e) => {
         window.navigator.vibrate(200)
+        drawCount(e)
         dispatch(increment())
         dispatch(increase())
 
@@ -51,7 +75,7 @@ function Coin() {
                 <img src="./img/money-mini.png" alt="money" />
                 <p className="coin_txt">{format(count.toString())}</p>
             </div>
-            <button className="coin_btn noselect" onClick={incrementMoney} >
+            <button className="coin_btn noselect" onClick={incrementMoney}>
                 <img src={skin} alt="coin" draggable="false" className='noselect'/>
             </button>
             <div className="coin_band">
