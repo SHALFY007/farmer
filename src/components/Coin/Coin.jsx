@@ -18,8 +18,8 @@ function Coin() {
     const dispatch = useDispatch()
 
     const drawCount = (e) => {
-        const y = e.targetTouches[0].clientY
-        const x = e.targetTouches[0].clientX
+        const y = e.targetTouches[e.targetTouches.length-1].clientY
+        const x = e.targetTouches[e.targetTouches.length-1].clientX
         
         const newDiv = document.createElement("div");
         newDiv.style.position = 'absolute'
@@ -30,7 +30,6 @@ function Coin() {
         newDiv.classList.add('coin_new_tap')
         const newContent = document.createTextNode(`+${oneTap}`);
         newDiv.appendChild(newContent);
-        console.log(newDiv)
         let currentDiv = document.querySelector('.coin_btn')
         currentDiv.insertAdjacentHTML('afterbegin', newDiv.outerHTML);
         setCounter(counter+1)
