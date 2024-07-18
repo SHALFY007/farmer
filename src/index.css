@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   overflow-y: hidden;
-  outline:0 !important
+  outline:0 !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @font-face {
